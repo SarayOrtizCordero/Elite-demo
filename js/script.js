@@ -42,11 +42,13 @@
     return days[di].toDateString()===n.toDateString() && n.getHours()*60+n.getMinutes()>=SLOT_MIN[si];
   }
   function renderList(){
+    var shownNext=false;
     $("list").innerHTML=SLOTS.map(function(s,i){
       if(isPast(state.day,i)) return "";
-      var f=free(state.day,i), dots="";
+      var f=free(state.day,i), dots="", nxt=false;
+      if(!shownNext && f>0 && days[state.day].toDateString()===new Date().toDateString()){nxt=true; shownNext=true;}
       for(var k=0;k<TOTAL;k++) dots+='<i class="'+(k<f?"":"t")+'"></i>';
-      return '<div class="row'+(f===0?" full":"")+'"><div class="time">'+s.replace(" ","<small>")+'</small></div>'+
+      return '<div class="row'+(f===0?" full":"")+(nxt?" next":"")+'"><div class="time">'+s.replace(" ","<small>")+'</small>'+(nxt?'<em class="tag-next">Próxima</em>':'')+'</div>'+
         '<div class="seats"><span class="dots" aria-hidden="true">'+dots+'</span><span>'+(f===0?"Clase llena":f+(f===1?" bici libre":" bicis libres"))+'</span></div>'+
         (f===0?"":'<button class="btn sm" type="button" data-i="'+i+'" aria-label="Elegir bici, clase de las '+s+'">Elegir bici</button>')+'</div>';
     }).join("")||'<p class="fine">Hoy ya terminaron las clases. Elige otro día.</p>';
@@ -132,7 +134,12 @@
   addEventListener("keydown",function(e){if(e.key==="Escape"&&hdr.classList.contains("open")){setMenu(false);burger.focus()}});
   burger.addEventListener("click",function(){setMenu(!hdr.classList.contains("open"))});
   $("nav").addEventListener("click",function(e){if(e.target.closest("a")) setMenu(false)});
-  function onScroll(){hdr.classList.toggle("stuck",scrollY>8)}
+  var fab=$("fab"), rsv=$("reservar");
+  function onScroll(){
+    hdr.classList.toggle("stuck",scrollY>8);
+    var r=rsv.getBoundingClientRect(), inRsv=r.top<innerHeight*.6&&r.bottom>innerHeight*.3;
+    fab.classList.toggle("show",scrollY>innerHeight*.6&&!inRsv);
+  }
   addEventListener("scroll",onScroll,{passive:true}); onScroll();
 
   $("yr").textContent=new Date().getFullYear();
