@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elite Spinning – Reserva tu bici</title>
+<meta name="description" content="Sala de spinning con 14 bicis y 5 clases al día de lunes a viernes. Elige tu bici y reserva por 4 $.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Bebas+Neue&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" href="assets/bike-icon.png">
+<link rel="apple-touch-icon" href="assets/bike-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#reservar">Saltar a la reserva</a>
+
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Elite Spinning, inicio">
+      <i class="logo" aria-hidden="true"></i>
+      <span>ELITE<b>SPINNING</b></span>
+    </a>
+    <nav id="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#reservar">Reservar</a></li>
+                <li><a href="#sala">La sala</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+    </nav>
+    <a class="btn sm" href="#reservar">Reservar bici</a>
+    <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="Primer plano en blanco y negro de un ciclista agarrando el manubrio"></div>
+    <div class="wrap hero-in">
+      <p class="eyebrow">Sala de spinning · Lunes a viernes</p>
+      <h1>Pedalea<br>al <em>límite.</em></h1>
+      <p class="sub">14 bicis, 5 clases al día y música a todo volumen. Elige tu bici y resérvala por <b>4&nbsp;$</b>.</p>
+      <div class="cta">
+        <a class="btn" href="#reservar">Reservar bici</a>
+      </div>
+    </div>
+    <ul class="stats wrap" aria-label="Datos de la sala">
+      <li><b>14</b><span>bicis</span></li>
+      <li><b>5</b><span>clases al día</span></li>
+      <li><b>L–V</b><span>lunes a viernes</span></li>
+      <li><b>4$</b><span>por bicicleta</span></li>
+    </ul>
+  </section>
+
+  <!-- RESERVAR -->
+  <section class="bonos" id="reservar">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow">Reserva</p>
+        <h2>Elige el día,<br>elige tu bici.</h2>
+        <p>Cada bici cuesta 4 $ por clase. Puedes reservar varias si vas acompañado.</p>
+        <ol class="mini"><li><b>1</b>Elige día y hora</li><li><b>2</b>Toca tu bici</li><li><b>3</b>Confirma por WhatsApp</li></ol>
+      </div>
+      <div class="days rv" id="days" role="group" aria-label="Día de la clase"></div>
+      <div class="list" id="list"></div>
+    </div>
+  </section>
+
+  <!-- LA SALA -->
+  <section class="room" id="sala">
+    <div class="wrap room-in">
+      <div class="rv">
+        <p class="eyebrow">La sala</p>
+        <h2>Una sala pequeña.<br>Una intensidad enorme.</h2>
+        <p class="lead">Catorce bicis frente al instructor, luces bajas y música que te empuja. Grupo reducido para que cada clase se sienta personal.</p>
+        <a class="btn" href="#reservar">Quiero mi bici</a>
+      </div>
+      <figure class="plan rv" aria-label="Plano de la sala con 14 bicis">
+        <div class="inst">Instructor</div>
+        <div id="plan"></div>
+        <figcaption>Así se ve la sala desde arriba.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-sec" id="faq">
+    <div class="wrap faq-in">
+      <div class="sec-head rv"><p class="eyebrow">Dudas</p><h2>Preguntas frecuentes</h2></div>
+      <div class="faq rv">
+        <details><summary>¿Cuánto cuesta una clase?</summary><p>Cada bicicleta cuesta 4 $ por clase.</p></details>
+        <details><summary>¿Qué días y a qué hora hay clases?</summary><p>De lunes a viernes, 5 clases al día. Las horas disponibles se ven en la sección Reservar, día por día.</p></details>
+        <details><summary>¿Puedo escoger mi bici?</summary><p>Sí. Al reservar ves la sala completa y marcas la bici que prefieras entre las libres.</p></details>
+        <details><summary>¿Puedo reservar varias bicis?</summary><p>Sí, marca todas las que necesites para ir acompañado. El total es 4 $ por bici.</p></details>
+        <details><summary>¿Qué debo traer?</summary><p>Ropa cómoda, agua y una toalla. Confirmaremos con Elite si hay calzado específico.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final">
+    <div class="wrap rv">
+      <h2>Tu bici<br>te espera.</h2>
+      <a class="btn" href="#reservar">Reservar bici</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="#inicio"><i class="logo" aria-hidden="true"></i><span>ELITE<b>SPINNING</b></span></a>
+        <p class="tag">Sala de spinning. Elige tu bici y pedalea.</p>
+      </div>
+      <div><h4>Explorar</h4><ul><li><a href="#reservar">Reservar</a></li><li><a href="#sala">La sala</a></li><li><a href="#faq">Preguntas</a></li></ul></div>
+      <div><h4>Reserva</h4><ul><li>Lunes a viernes</li><li>4 $ por bicicleta</li><li><a href="#reservar">Elegir mi bici</a></li></ul></div>
+    </div>
+    <div class="legal">© <span id="yr"></span> Elite Spinning · Demo</div>
+  </div>
+</footer>
+
+<!-- Reserva de bici -->
+<dialog id="buy" aria-labelledby="cTitle">
+  <div class="dlg">
+    <button class="x" type="button" id="buyClose" aria-label="Cerrar"></button>
+    <section id="vPick">
+      <p class="eyebrow" id="cWhen"></p>
+      <h3 id="cTitle">Elige tu bici</h3>
+      <div class="map">
+        <div class="inst">Instructor</div>
+        <div id="rows"></div>
+        <div class="legend" aria-hidden="true"><span><i></i>Libre</span><span><i class="oc"></i>Ocupada</span><span><i class="tu"></i>Tuya</span></div>
+      </div>
+      <p class="picked" id="picked" aria-live="polite"></p>
+      <div class="sum"><span id="pNote">Sin bicis</span><b id="pTotal">0 $</b></div>
+      <button class="btn block" type="button" id="toForm" disabled>Continuar</button>
+    </section>
+    <form id="vForm" hidden novalidate>
+      <p class="eyebrow" id="fWhen"></p>
+      <h3>Tus datos</h3>
+      <div class="sum"><span id="fSum"></span><b id="fTotal"></b></div>
+      <label class="field" id="f-name"><span>Nombre y apellido</span><input name="name" autocomplete="name" placeholder="María Fernanda Rojas"><em>Escribe tu nombre y apellido.</em></label>
+      <label class="field" id="f-wa"><span>WhatsApp</span><input name="wa" type="tel" inputmode="tel" autocomplete="tel" placeholder="0414 555 0192"><em>Escribe tu número de WhatsApp.</em></label>
+      <button class="btn block" type="submit">Confirmar reserva</button>
+      <button class="btn ghost block" type="button" id="back">Volver</button>
+      <p class="fine">Demo: la reserva se guarda solo en este navegador.</p>
+    </form>
+    <section id="vDone" hidden>
+      <svg class="ok" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="M24 41l11 11 21-24"/></svg>
+      <h3 id="doneTitle" tabindex="-1">Último paso</h3>
+      <p class="lead" id="doneMsg"></p>
+      <p class="lead">Tu reserva se confirma cuando nos la envíes por WhatsApp.</p>
+      <a class="btn block" id="waBtn" href="#" target="_blank" rel="noopener">Enviar reserva por WhatsApp</a>
+      <button class="btn ghost block" type="button" id="again">Reservar otra</button>
+      
+    </section>
+  </div>
+</dialog>
+
+<script src="js/script.js"></script>
+</body>
+</html>
